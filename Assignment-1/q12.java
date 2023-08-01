@@ -9,8 +9,8 @@ class ArrayCopy{
 		System.out.println("arr1:");
 		for(int i=0; i<arr1.length ; i++) {
 			System.out.print(arr1[i]+" ");
-		}
 		System.out.println();
+		}
 		System.out.println("arr2:");
 		for(int i=0 ; i<arr2.length ; i++) {
 			System.out.print(arr2[i]+" ");
