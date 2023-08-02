@@ -1,44 +1,39 @@
 import java.util.Scanner;
 
-class AddMatrices {
+class Sorting{
 	public static void main(String args[]) {
+		int [] list = new int[5];
+		int temp = 0;
+		
+		// Taking input elements.
+		System.out.println("Enter 5 elements :");
 		Scanner sc = new Scanner(System.in);
-		
-		float [][] mat1 = new float[3][3];
-		float [][] mat2 = new float[3][3];
-		float [][] result = new float[3][3];
-		
-		// Taking matix 1 elements :
-		System.out.println("Enter matrices number1: ");
-		for(int i=0; i<3 ; i++) {
-			for(int j=0 ; j<3 ; j++) {
-				mat1[i][j] = sc.nextFloat();
-			}
+		for(int i =0; i<list.length ; i++){
+			list[i]=sc.nextInt();
 		}
 		
-		// Taking matix 2 elements :
-		System.out.println("Enter matrices number2: ");
-		for(int i=0; i<3 ; i++) {
-			for(int j=0 ; j<3 ; j++) {
-				mat2[i][j] = sc.nextFloat();
-			}
+		// Displaying the unsorted elements of array.
+		System.out.println("Unsorted elements:");
+		for(int i =0; i<list.length ; i++) {
+			System.out.print(list[i]+" ");
 		}
 		
-		// Adding 2 matrix and printing result.
-		System.out.println("Addtion of two matrices:");
-		for(int i=0; i<mat1.length;i++){
-			for(int j=0 ; j<mat1[i].length ; i++) {
-				result[i][j] = mat1[i][j] + mat2[i][j]; // perform addition.
-				System.out.println(result[i][j] + " "); // printing the result of addition.
-				
+		// Sorting the elements of array.
+		for(int i=0; i<list.length ; i++) {
+			for(int j=i+1 ; j<list.length ; j++) {
+				if(list[i]>list[j]) {
+				temp = list[i];
+				list[i] = list[j];
+				list[j] = temp;
+				}
 			}
-			System.out.println(" ");
+		}
+		System.out.println();
+		
+		// Displaying sorted elements.
+		System.out.println("Sorted elements:");
+		for(int i=0 ; i<list.length ; i++) {
+			System.out.print(list[i]+" ");
 		}
 	}
 }
-
-/*
-System.out.print(mat1[0][0]+" ");
-		System.out.print(mat1[0][1]+" ");
-		System.out.print(mat1[0][2]+" ");
-*/
