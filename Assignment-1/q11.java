@@ -1,5 +1,4 @@
 import java.util.Scanner;
-
 class FibonacciSeries {
 	public static int fibonacci(int n) {
         if (n <= 1) {
