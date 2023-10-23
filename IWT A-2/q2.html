@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function greetUser() {
+            var name = prompt("Enter name");
+            var time = new Date();
+            var hr = time.getHours();
+            var min = time.getMinutes();
+            var period, display;
+
+            if (hr >= 12) {
+                period = "PM";
+                if (hr > 12) {
+                    display = hr - 12;
+                } else {
+                    display = 12;
+                }
+            } else {
+                period = "AM";
+                if (hr === 0) {
+                    display = 12;
+                } else {
+                    display = hr;
+                }
+            }
+
+            var duration;
+            if (display > 11 && period === "AM") {
+                duration = "Good morning";
+            } else if (display > 12 && period === "PM") {
+                duration = "Good afternoon";
+            }
+
+            alert("Hello " + name + " " + duration);
+        }
+    </script>
+
+    <form>
+        <input type="button" id="btn" value="Greet User" onclick="greetUser()">
+    </form>
+</body>
+</html>

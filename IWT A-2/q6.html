@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function changeColor(colorBtn) {
+            document.body.style.background = colorBtn;
+        }
+        function changeHead(colorBtn) {
+            document.getElementById("heading").style.color = colorBtn;
+        }
+    </script>
+
+</head>
+
+<body>
+
+    
+    <label for="">Select Background color: </label>
+    <div>
+        <button id="red" onclick="changeColor('red');">Red</button>
+        <button id="blue" onclick="changeColor('blue')">Blue</button>
+        <button id="green" onclick="changeColor('green')">Green</button>
+        <button id="yellow" onclick="changeColor('yellow')">Yellow</button>
+        <button id="purple" onclick="changeColor('purple')">Purple</button>
+        <button id="turqoise" onclick="changeColor('turquoise')">Turquoise</button>
+        <button id="gray" onclick="changeColor('gray')">Gray</button>
+    </div>
+    <hr>
+    <label for="">Select color for heading: </label>
+    <div>
+        <button type="button" ondblclick="changeHead('maroon')">Maroon</button>
+        <button type="button" ondblclick="changeHead('teal')">Teal</button>
+        <button type="button" ondblclick="changeHead('orange')">Orange</button>
+        <button type="button" ondblclick="changeHead('green')">Green</button>
+    </div>
+</body>
+
+</html>

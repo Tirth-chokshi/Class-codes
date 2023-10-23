@@ -1,0 +1,56 @@
+
+<html lang="en">
+<head>
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        var day = prompt("Enter the day number");
+        var dayUpadte;
+        switch (parseInt(day)) {
+                case 1:
+                dayUpadte ="Monday";
+                break;
+
+                case 2:
+                dayUpadte ="Tuesday";
+                break;
+
+                case 3:
+                dayUpadte ="Wednesday";
+                break;
+
+                case 4:
+                dayUpadte ="Thursday";
+                break;
+
+                case 5:
+                dayUpadte ="Friday";
+                break;
+
+                case 6:
+                dayUpadte ="Saturday";
+                break;
+
+                case 7:
+                dayUpadte ="Sunday";
+                break;
+            default:
+                dayUpadte = "Invalid day"; // Handle invalid input.
+                break;
+            
+           
+        }
+        var dayDefiner;
+            if (day >6) {
+                dayDefiner = "Weekend , Time to have fun";
+            }
+            else 
+            {
+                dayDefiner = "Weekday , Time to Work hard"
+            }
+            alert("Hey It's "+ dayUpadte +" !"+ " "+dayDefiner);
+    </script>    
+</body>
+</html>
