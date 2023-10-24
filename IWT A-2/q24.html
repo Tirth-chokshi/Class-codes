@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        document.addEventListener("DOMContentLoaded",function () {
+            function headingVisibility() {
+                const head = document.querySelectorAll("h1, h2, h3, h4, h5, h6");
+                const displayHeading = document.getElementById("displayHeading").checked;
+            }
+            head.forEach(function(heading){
+                heading.style.display = displayHeading ? "block" :"none"; 
+            })
+        })
+    </script>
+</head>
+<body>
+    <h1>Heading</h1>
+    <form action="">
+        <label for="displayHeading">Visibility: </label>
+        <input type="checkbox" id="displayHeading" onchange="headingVisibility()" >display
+    </form>
+</body>
+</html>
