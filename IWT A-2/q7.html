@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>q5</title>
+    <style>
+        img{
+            height: 25rem;
+        }
+        body{
+            background-color:lightslategray ;
+        }
+    </style>
+    <script>
+        function revelDocument() {
+          const pass = prompt("Enter the Meth-Lord name:");
+          if (pass === "heisenberg") {
+            window.location.href = "meth-recipe.pdf";
+          } else {
+            alert("Disappointment");
+          }
+        }
+      </script>
+</head>
+<body>
+       <center><img src="meth.png" alt="meth-png" onclick="revelDocument()"></center>
+</body>
+</html>

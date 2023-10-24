@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+    document.addEventListener("DOMContentLoaded",function () {
+        document.getElementById("submitBtn").addEventListener("click",function (error) {
+            error.preventDefault(); // prevent form from submiitting
+            var minimumNumber = parseFloat(document.getElementById("minNum").value);
+            var maximumNumber = parseFloat(document.getElementById("maxNum").value);
+            var display = document.getElementById("output");
+
+            if (!isNaN(minimumNumber) && !isNaN(maximumNumber) && minimumNumber < maximumNumber) {
+                display.textContent = "Validation status: Valid";
+            } else {
+                display.textContent = "Validation status: Invalid";
+            }
+        })
+    })       
+    </script>
+</head>
+<body>
+    <form action="">
+        <label for="mini">Minimum: </label>
+        <input type="number" name="minNum" id="minNum">
+        <br>
+        <label for="maxi">Maximum: </label>
+        <input type="number" name="maxNum" id="maxNum">
+        <br>
+        <button id="submitBtn">Submit</button>
+    </form>
+    <p id="output">Validation status: </p>
+</body>
+</html>

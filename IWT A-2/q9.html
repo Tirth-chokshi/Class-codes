@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var weekDays =["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+        var monthYears =["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+        var presentDate = new Date();
+        var day = weekDays[presentDate.getDay()]
+        var month = monthYears[presentDate.getMonth()]
+        var dayOfMonth = presentDate.getDate();
+        var year = presentDate.getFullYear();
+        alert(day +" "+ month +" "+ dayOfMonth +" "+ year);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

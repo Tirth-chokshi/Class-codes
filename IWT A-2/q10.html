@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <script>
+      document.addEventListener("DOMContentLoaded",function () {
+        document.getElementById("submitBtn").addEventListener("click",function () {
+            const stringGet = document.getElementById("name");
+            const nameGet = stringGet.value;
+            const upperCasing  = nameGet.toUpperCase();
+            document.getElementById("output").innerHTML = upperCasing;
+        })
+      })
+    </script>
+</head>
+<body>
+    <form>
+        <table >
+            <tr>
+                <td><label for="name">Name: </label></td></td>
+                <td><input type="text" name="name" id="name"></td></td>
+            </tr>
+            <tr>
+                <td colspan="2" ><center><button type="button" id="submitBtn">UpperCaseString</button></td>
+            </tr>
+    </table>
+    </form>
+    <label for="output">Output: </label>
+    <p id="output"></p>
+</body>
+</html>
