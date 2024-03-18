@@ -88,13 +88,13 @@ class sLinkedList{
 			}
 			else{
 				Node temp=head;
-				Node temp1=temp.next;a
+				Node ptr=temp.next;
 				for(int i=1;i<(pos-1);i++){
-					temp=temp1;
-					temp1=temp1.next;
+					temp=ptr;
+					ptr=ptr.next;
 				}
-				temp.next=temp1.next;
-				temp1=null;
+				temp.next=ptr.next;
+				ptr=null;
 			}
 		}
 	} 
