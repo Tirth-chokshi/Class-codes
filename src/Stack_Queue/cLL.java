@@ -67,12 +67,11 @@ class scLinkedList{
 		temp.next=nd;
 	}
 	void  dFront(){
-		Node temp=head;
+		Node temp=head.next;
 		Node tail=head;
 		while(tail.next!=head){
 			tail=tail.next;
 		}
-		temp=temp.next;
 		head=temp;
 		tail.next=head;
 	}
